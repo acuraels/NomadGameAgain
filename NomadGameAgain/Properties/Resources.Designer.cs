@@ -73,16 +73,6 @@ namespace NomadGameAgain.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap medievalEnvironment_04 {
-            get {
-                object obj = ResourceManager.GetObject("medievalEnvironment_04", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap medievalEnvironment_05 {
             get {
                 object obj = ResourceManager.GetObject("medievalEnvironment_05", resourceCulture);
