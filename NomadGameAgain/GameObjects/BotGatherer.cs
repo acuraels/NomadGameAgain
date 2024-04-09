@@ -72,9 +72,9 @@ namespace NomadGameAgain.GameObjects
         {
             Point pt = Location;
 
-            float tx = x - pt.X;
-            float ty = y - pt.Y;
-            float length = (float)Math.Sqrt(tx * tx + ty * ty);
+            var tx = x - pt.X;
+            var ty = y - pt.Y;
+            var length = (float)Math.Sqrt(tx * tx + ty * ty);
 
             if (length > speed) 
             {
@@ -95,16 +95,16 @@ namespace NomadGameAgain.GameObjects
         private Coin GetClosest()
         {
             Coin c = null;
-            int distClosest = 9999;
+            var distClosest = 9999;
 
             if(Core.CoinsList.Count > 0)
             {
                 foreach (var item in Core.CoinsList)
                 {
-                    float tx = item.Location.X - Location.X;
-                    float ty = item.Location.Y - Location.Y;
+                    var tx = item.Location.X - Location.X;
+                    var ty = item.Location.Y - Location.Y;
 
-                    int length = (int)Math.Sqrt(tx *tx + ty * ty);
+                    var length = (int)Math.Sqrt(tx *tx + ty * ty);
 
                     if(length < distClosest)
                     {
@@ -115,6 +115,5 @@ namespace NomadGameAgain.GameObjects
             }
             return c;
         }
-
     }
 }
