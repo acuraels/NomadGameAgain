@@ -1,9 +1,5 @@
 ﻿using NomadGameAgain.GameObjects;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NomadGameAgain
@@ -25,5 +21,6 @@ namespace NomadGameAgain
 
         // Coins
         public static List<Coin> CoinsList = new List<Coin>();
+        public static int Coins = 0;
     }
 }

@@ -1,13 +1,10 @@
 ﻿using NomadGameAgain.GameObjects;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace NomadGameAgain
 {
@@ -16,6 +13,31 @@ namespace NomadGameAgain
         public Form1()
         {
             InitializeComponent();
+
+        }
+
+        private Point position;
+        private bool dragging, lose = false;
+
+        private void MouseClickDown(object sender, MouseEventArgs e)
+        {
+            dragging = true;
+            position.X = e.X;
+            position.Y = e.Y;
+        }
+
+        private void MouseClickUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
+        }
+
+        private void MouseClickMove(object sender, MouseEventArgs e)
+        {
+            if (dragging)
+            {
+                Point currentPoint = PointToScreen(new Point(e.X, e.Y));
+                this.Location = new Point(currentPoint.X - position.X, currentPoint.Y - position.Y + pictureBox1.Top);
+            }
         }
 
         private void OnKeyDown(object sender, KeyEventArgs e)
@@ -68,12 +90,44 @@ namespace NomadGameAgain
             Controls.Add(c);
 
             Core.CoinsList.Add(c);
+
+            labelCoinsLeft.Text = $"{Core.CoinsList.Count} Left";
         }
 
         private void OnKeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Escape)
                 this.Close();
+        }
+
+        private void Update(object sender, EventArgs e)
+        {
+            List<Coin> coinsToRemove = new List<Coin>(Core.CoinsList);
+
+            foreach (var coin in coinsToRemove)
+            {
+                foreach (var unit in Controls.OfType<Unit>())
+                {
+                    if (unit.Bounds.IntersectsWith(coin.Bounds))
+                    {
+                        Core.CoinsList.Remove(coin);
+                        Controls.Remove(coin);
+                        AddCoin();
+                        break;
+                    }
+                }
+            }
+        }
+
+        private void coin1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        void AddCoin()
+        {
+            Core.Coins++;
+            labelCoinsGathered.Text = $"{Core.Coins} Coins";
         }
     }
 }

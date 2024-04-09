@@ -1,19 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NomadGameAgain.GameObjects
 {
-    public class Player : UserControl
+    public class Player : Unit
     {
         private Timer timerUpdate;
         private System.ComponentModel.IContainer components;
         private PictureBox pictureBox1;
 
-        private int speed = 3;
+
+        private int speed = 4;
 
         private void InitializeComponent()
         {
@@ -31,8 +28,8 @@ namespace NomadGameAgain.GameObjects
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_57;
-            this.pictureBox1.Image = global::NomadGameAgain.Properties.Resources.medievalUnit_02;
+            this.pictureBox1.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
+            this.pictureBox1.Image = global::NomadGameAgain.Properties.Resources.medievalUnit_24;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(51, 59);
@@ -43,7 +40,7 @@ namespace NomadGameAgain.GameObjects
             // 
             // Player
             // 
-            this.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_57;
+            this.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
             this.Controls.Add(this.pictureBox1);
             this.Name = "Player";
             this.Size = new System.Drawing.Size(51, 59);

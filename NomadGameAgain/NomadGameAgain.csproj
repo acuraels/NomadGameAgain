@@ -53,16 +53,25 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameObjects\BotGatherer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="GameObjects\Coin.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GameObjects\Player.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="GameObjects\Unit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameObjects\BotGatherer.resx">
+      <DependentUpon>BotGatherer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GameObjects\Coin.resx">
       <DependentUpon>Coin.cs</DependentUpon>
@@ -116,6 +125,51 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\medievalEnvironment_19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medievalEnvironment_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medievalUnit_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medievalUnit_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medievalUnit_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medievalStructure_18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medievalTile_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medievalEnvironment_20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medievalEnvironment_18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medievalEnvironment_14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medievalEnvironment_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medievalStructure_19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medievalStructure_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medievalStructure_06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medievalStructure_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medievalEnvironment_05.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NomadGameAgain.GameObjects
@@ -24,10 +20,12 @@ namespace NomadGameAgain.GameObjects
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
             this.pictureBox1.Image = global::NomadGameAgain.Properties.Resources._1678470005;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 64);
+            this.pictureBox1.Size = new System.Drawing.Size(34, 34);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -36,7 +34,7 @@ namespace NomadGameAgain.GameObjects
             // 
             this.Controls.Add(this.pictureBox1);
             this.Name = "Coin";
-            this.Size = new System.Drawing.Size(63, 63);
+            this.Size = new System.Drawing.Size(34, 34);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
