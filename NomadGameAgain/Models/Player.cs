@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace NomadGameAgain.GameObjects
 {
@@ -63,14 +64,15 @@ namespace NomadGameAgain.GameObjects
 
         private void Update(object sender, EventArgs e)
         {
-            if (Core.IsUp)
+            if (Core.IsUp && Top > 0)
                 Top -= speed;
-            if (Core.IsDown)
+            if (Core.IsDown && Bottom < this.Parent.Height)
                 Top += speed;
-            if (Core.IsLeft)
+            if (Core.IsLeft && Left > 0)
                 Left -= speed;
-            if (Core.IsRight)
+            if (Core.IsRight && Right < this.Parent.Width)
                 Left += speed;
         }
+
     }
 }

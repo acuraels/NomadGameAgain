@@ -41,13 +41,13 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.labelCoinsLeft = new System.Windows.Forms.Label();
             this.labelCoinsGathered = new System.Windows.Forms.Label();
-            this.botGatherer1 = new NomadGameAgain.GameObjects.BotGatherer();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.player1 = new NomadGameAgain.GameObjects.Player();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.botGatherer1 = new NomadGameAgain.GameObjects.BotGatherer();
+            this.player1 = new NomadGameAgain.GameObjects.Player();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
@@ -82,7 +82,7 @@
             this.pictureBox14.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
             this.pictureBox14.Image = global::NomadGameAgain.Properties.Resources.medievalStructure_12;
             this.pictureBox14.Location = new System.Drawing.Point(640, 214);
-            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(103, 94);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -94,7 +94,7 @@
             this.pictureBox13.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
             this.pictureBox13.Image = global::NomadGameAgain.Properties.Resources.medievalStructure_06;
             this.pictureBox13.Location = new System.Drawing.Point(65, 334);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(133, 122);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -106,7 +106,7 @@
             this.pictureBox12.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
             this.pictureBox12.Image = global::NomadGameAgain.Properties.Resources.medievalStructure_02;
             this.pictureBox12.Location = new System.Drawing.Point(65, 239);
-            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(133, 101);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -118,7 +118,7 @@
             this.pictureBox4.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
             this.pictureBox4.Image = global::NomadGameAgain.Properties.Resources.medievalEnvironment_18;
             this.pictureBox4.Location = new System.Drawing.Point(531, 431);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(151, 122);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -130,7 +130,7 @@
             this.pictureBox11.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
             this.pictureBox11.Image = global::NomadGameAgain.Properties.Resources.medievalEnvironment_18;
             this.pictureBox11.Location = new System.Drawing.Point(804, 32);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(151, 122);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -142,7 +142,7 @@
             this.pictureBox10.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
             this.pictureBox10.Image = global::NomadGameAgain.Properties.Resources.medievalEnvironment_19;
             this.pictureBox10.Location = new System.Drawing.Point(216, 75);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(65, 71);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -154,7 +154,7 @@
             this.pictureBox9.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
             this.pictureBox9.Image = global::NomadGameAgain.Properties.Resources.medievalEnvironment_19;
             this.pictureBox9.Location = new System.Drawing.Point(301, 431);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(65, 71);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -166,7 +166,7 @@
             this.pictureBox8.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
             this.pictureBox8.Image = global::NomadGameAgain.Properties.Resources.medievalEnvironment_19;
             this.pictureBox8.Location = new System.Drawing.Point(1165, 446);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(65, 71);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -178,7 +178,7 @@
             this.pictureBox7.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
             this.pictureBox7.Image = global::NomadGameAgain.Properties.Resources.medievalStructure_19;
             this.pictureBox7.Location = new System.Drawing.Point(869, 404);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(133, 128);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -190,7 +190,7 @@
             this.pictureBox6.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
             this.pictureBox6.Image = global::NomadGameAgain.Properties.Resources.medievalStructure_18;
             this.pictureBox6.Location = new System.Drawing.Point(365, 15);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(124, 132);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -224,21 +224,12 @@
             this.labelCoinsGathered.TabIndex = 7;
             this.labelCoinsGathered.Text = "0 coins";
             // 
-            // botGatherer1
-            // 
-            this.botGatherer1.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
-            this.botGatherer1.Location = new System.Drawing.Point(915, 271);
-            this.botGatherer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.botGatherer1.Name = "botGatherer1";
-            this.botGatherer1.Size = new System.Drawing.Size(60, 69);
-            this.botGatherer1.TabIndex = 6;
-            // 
             // pictureBox5
             // 
             this.pictureBox5.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
             this.pictureBox5.Image = global::NomadGameAgain.Properties.Resources.medievalEnvironment_19;
             this.pictureBox5.Location = new System.Drawing.Point(737, 351);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(65, 71);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -250,7 +241,7 @@
             this.pictureBox3.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
             this.pictureBox3.Image = global::NomadGameAgain.Properties.Resources.medievalStructure_17;
             this.pictureBox3.Location = new System.Drawing.Point(1153, 181);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(136, 132);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -262,44 +253,54 @@
             this.pictureBox2.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
             this.pictureBox2.Image = global::NomadGameAgain.Properties.Resources.medievalEnvironment_18;
             this.pictureBox2.Location = new System.Drawing.Point(277, 265);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(151, 122);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
-            // player1
-            // 
-            this.player1.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
-            this.player1.Location = new System.Drawing.Point(531, 181);
-            this.player1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.player1.Name = "player1";
-            this.player1.Size = new System.Drawing.Size(65, 73);
-            this.player1.TabIndex = 0;
-            this.player1.Load += new System.EventHandler(this.player1_Load);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
-            this.pictureBox1.Location = new System.Drawing.Point(-8, -5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1329, 575);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox16
             // 
             this.pictureBox16.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
             this.pictureBox16.Image = global::NomadGameAgain.Properties.Resources.medievalEnvironment_19;
             this.pictureBox16.Location = new System.Drawing.Point(1055, 98);
-            this.pictureBox16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox16.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(65, 71);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox16.TabIndex = 20;
             this.pictureBox16.TabStop = false;
+            // 
+            // botGatherer1
+            // 
+            this.botGatherer1.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
+            this.botGatherer1.Location = new System.Drawing.Point(915, 271);
+            this.botGatherer1.Margin = new System.Windows.Forms.Padding(4);
+            this.botGatherer1.Name = "botGatherer1";
+            this.botGatherer1.Size = new System.Drawing.Size(60, 69);
+            this.botGatherer1.TabIndex = 6;
+            // 
+            // player1
+            // 
+            this.player1.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
+            this.player1.Location = new System.Drawing.Point(531, 181);
+            this.player1.Margin = new System.Windows.Forms.Padding(4);
+            this.player1.Name = "player1";
+            this.player1.Size = new System.Drawing.Size(65, 73);
+            this.player1.TabIndex = 0;
+            this.player1.Load += new System.EventHandler(this.player1_Load);
             // 
             // Form1
             // 
@@ -325,7 +326,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.player1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

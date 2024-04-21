@@ -10,9 +10,27 @@ namespace NomadGameAgain
 {
     public partial class Form1 : Form
     {
+        private GameController gameController;
+
         public Form1()
         {
             InitializeComponent();
+
+            // Создаем экземпляры игрока, бота и списка монет
+            Player player = new Player();
+            BotGatherer bot = new BotGatherer();
+            List<Coin> coins = new List<Coin>();
+
+            // Добавляем игрока, бота и монеты на форму и в список монет
+            this.Controls.Add(player);
+            this.Controls.Add(bot);
+            foreach (var coin in coins)
+            {
+                this.Controls.Add(coin);
+            }
+
+            // Создаем экземпляр контроллера и передаем ему игрока, бота и список монет
+            gameController = new GameController(player, bot, coins);
 
         }
 
@@ -123,6 +141,12 @@ namespace NomadGameAgain
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
         void AddCoin()
         {
