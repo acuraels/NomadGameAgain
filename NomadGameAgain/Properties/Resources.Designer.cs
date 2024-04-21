@@ -279,5 +279,15 @@ namespace NomadGameAgain.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Nomad_Game {
+            get {
+                object obj = ResourceManager.GetObject("Nomad_Game", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
