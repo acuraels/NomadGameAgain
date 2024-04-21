@@ -192,6 +192,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="medievalUnit_02.ico" />
+    <None Include="Resources\medievalUnit_15.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -30,10 +30,10 @@ namespace NomadGameAgain.GameObjects
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
-            this.pictureBox1.Image = global::NomadGameAgain.Properties.Resources.medievalUnit_24;
+            this.pictureBox1.Image = global::NomadGameAgain.Properties.Resources.medievalUnit_02;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(51, 59);
+            this.pictureBox1.Size = new System.Drawing.Size(51, 66);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -44,7 +44,7 @@ namespace NomadGameAgain.GameObjects
             this.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
             this.Controls.Add(this.pictureBox1);
             this.Name = "Player";
-            this.Size = new System.Drawing.Size(51, 59);
+            this.Size = new System.Drawing.Size(51, 65);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

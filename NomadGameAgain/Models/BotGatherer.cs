@@ -34,10 +34,10 @@ namespace NomadGameAgain.GameObjects
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
-            this.pictureBox1.Image = global::NomadGameAgain.Properties.Resources.medievalUnit_21;
+            this.pictureBox1.Image = global::NomadGameAgain.Properties.Resources.medievalUnit_15;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 60);
+            this.pictureBox1.Size = new System.Drawing.Size(45, 67);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -47,7 +47,7 @@ namespace NomadGameAgain.GameObjects
             // 
             this.Controls.Add(this.pictureBox1);
             this.Name = "BotGatherer";
-            this.Size = new System.Drawing.Size(45, 56);
+            this.Size = new System.Drawing.Size(45, 68);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -63,9 +63,7 @@ namespace NomadGameAgain.GameObjects
             Coin c = GetClosest();
 
             if(c != null)
-            {
                 MoveTowards(c.Location.X, c.Location.Y, speed);
-            }
         }
 
         public void MoveTowards(int x, int y, float speed) 
@@ -83,6 +81,7 @@ namespace NomadGameAgain.GameObjects
 
                 Location = new Point(pt.X, pt.Y);
             }
+
             else
             {
                 pt.X = x;
