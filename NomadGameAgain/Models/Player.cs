@@ -33,7 +33,7 @@ namespace NomadGameAgain.GameObjects
             this.pictureBox1.Image = global::NomadGameAgain.Properties.Resources.medievalUnit_02;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(51, 66);
+            this.pictureBox1.Size = new System.Drawing.Size(58, 66);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -44,7 +44,7 @@ namespace NomadGameAgain.GameObjects
             this.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
             this.Controls.Add(this.pictureBox1);
             this.Name = "Player";
-            this.Size = new System.Drawing.Size(51, 65);
+            this.Size = new System.Drawing.Size(55, 62);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -73,6 +73,5 @@ namespace NomadGameAgain.GameObjects
             if (Core.IsRight && Right < this.Parent.Width)
                 Left += speed;
         }
-
     }
 }

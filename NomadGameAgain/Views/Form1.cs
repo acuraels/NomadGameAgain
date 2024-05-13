@@ -11,6 +11,7 @@ namespace NomadGameAgain
     public partial class Form1 : Form
     {
         private GameController gameController;
+        public int speed = 6;
 
         public Form1()
         {
@@ -97,20 +98,38 @@ namespace NomadGameAgain
             KeyPreview = true;
         }
 
+        // Создаем один раз экземпляр Random
+        private Random random = new Random();
+
         private void Coin_Generate(object sender, EventArgs e)
         {
-            Random r = new Random();
+            Console.WriteLine("Generating coin...");
 
-            var x = r.Next(20, 300);
-            var y = r.Next(20, 300);
+            // Генерируем уникальные координаты для каждой монетки
+            var x = random.Next(20, 300);
+            var y = random.Next(20, 300);
 
-            Coin c = new Coin(x, y);
-            Controls.Add(c);
+            Coin coin = new Coin(x, y);
+            Console.WriteLine($"Coin created at position ({x}, {y})");
 
-            Core.CoinsList.Add(c);
+            // Добавляем монетку на форму
+            Controls.Add(coin);
+            Console.WriteLine("Coin added to controls");
 
+            // Добавляем монетку в список монет
+            Core.CoinsList.Add(coin);
+            Console.WriteLine($"Total coins: {Core.CoinsList.Count}");
+
+            // Обновляем текст метки
             labelCoinsLeft.Text = $"{Core.CoinsList.Count} Left";
+
+            // Обновляем экран
+            Invalidate();
         }
+
+
+
+
 
         private void OnKeyPress(object sender, KeyPressEventArgs e)
         {
@@ -135,6 +154,68 @@ namespace NomadGameAgain
                     }
                 }
             }
+
+            if ((player1.Bounds.IntersectsWith(obstacleCenter.Bounds)) || (player1.Bounds.IntersectsWith(houseObstacle1.Bounds)) ||
+                (player1.Bounds.IntersectsWith(houseObstacle2.Bounds)) || (player1.Bounds.IntersectsWith(houseObstacle3.Bounds)) ||
+                (player1.Bounds.IntersectsWith(labelCoinsGathered.Bounds)) || (player1.Bounds.IntersectsWith(labelCoinsLeft.Bounds)) ||
+                (player1.Bounds.IntersectsWith(bushObstacle1.Bounds)) || (player1.Bounds.IntersectsWith(bushObstacle2.Bounds)) ||
+                (player1.Bounds.IntersectsWith(bushObstacle3.Bounds)) || (player1.Bounds.IntersectsWith(bushObstacle4.Bounds)) ||
+                 (player1.Bounds.IntersectsWith(logObstacle.Bounds)))
+
+            {
+                if (Core.IsRight)
+                {
+                    Core.IsRight = false;
+                    player1.Left -= speed; // Откатываем игрока назад, чтобы он не застрял в препятствии
+                }
+
+                // То же самое делаем для остальных направлений движения
+                if (Core.IsLeft)
+                {
+                    Core.IsLeft = false;
+                    player1.Left += speed;
+                }
+
+                if (Core.IsUp)
+                {
+                    Core.IsUp = false;
+                    player1.Top += speed;
+                }
+
+                if (Core.IsDown)
+                {
+                    Core.IsDown = false;
+                    player1.Top -= speed;
+                }
+            }
+
+            if (player1.Bounds.IntersectsWith(botGatherer1.Bounds))
+            {
+                if (Core.IsRight)
+                {
+                    Core.IsRight = false;
+                    player1.Left -= speed; // Откатываем игрока назад, чтобы он не застрял в препятствии
+                }
+
+                // То же самое делаем для остальных направлений движения
+                if (Core.IsLeft)
+                {
+                    Core.IsLeft = false;
+                    player1.Left += speed;
+                }
+
+                if (Core.IsUp)
+                {
+                    Core.IsUp = false;
+                    player1.Top += speed;
+                }
+
+                if (Core.IsDown)
+                {
+                    Core.IsDown = false;
+                    player1.Top -= speed;
+                }
+            }
         }
 
         private void coin1_Load(object sender, EventArgs e)
@@ -147,6 +228,25 @@ namespace NomadGameAgain
 
         }
 
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void houseObstacle1_Click(object sender, EventArgs e)
+        {
+
+        }
 
         void AddCoin()
         {

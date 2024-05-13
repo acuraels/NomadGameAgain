@@ -4,7 +4,7 @@ namespace NomadGameAgain.GameObjects
 {
     public class Unit : UserControl
     {
-        private void InitializeComponent()
+        public void InitializeComponent()
         {
             this.SuspendLayout();
             // 

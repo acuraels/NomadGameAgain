@@ -50,6 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contollers\Core.cs" />
+    <Compile Include="Models\Obstacle.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Views\StartForm.cs">
       <SubType>Form</SubType>
     </Compile>

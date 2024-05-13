@@ -47,7 +47,7 @@ namespace NomadGameAgain.GameObjects
             // 
             this.Controls.Add(this.pictureBox1);
             this.Name = "BotGatherer";
-            this.Size = new System.Drawing.Size(45, 68);
+            this.Size = new System.Drawing.Size(45, 63);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
