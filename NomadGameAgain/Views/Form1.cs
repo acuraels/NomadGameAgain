@@ -248,6 +248,11 @@ namespace NomadGameAgain
 
         }
 
+        private void houseObstacle3_Click(object sender, EventArgs e)
+        {
+
+        }
+
         void AddCoin()
         {
             Core.Coins++;

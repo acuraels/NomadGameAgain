@@ -27,6 +27,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.timerCoins = new System.Windows.Forms.Timer(this.components);
             this.timerUpdate = new System.Windows.Forms.Timer(this.components);
             this.labelCoinsLeft = new System.Windows.Forms.Label();
@@ -35,14 +36,16 @@
             this.obstacleCenter = new System.Windows.Forms.PictureBox();
             this.houseObstacle1 = new System.Windows.Forms.PictureBox();
             this.houseObstacle2 = new System.Windows.Forms.PictureBox();
-            this.player1 = new NomadGameAgain.GameObjects.Player();
-            this.botGatherer1 = new NomadGameAgain.GameObjects.BotGatherer();
             this.bushObstacle3 = new System.Windows.Forms.PictureBox();
             this.bushObstacle1 = new System.Windows.Forms.PictureBox();
             this.bushObstacle4 = new System.Windows.Forms.PictureBox();
             this.bushObstacle2 = new System.Windows.Forms.PictureBox();
             this.houseObstacle3 = new System.Windows.Forms.PictureBox();
             this.logObstacle = new System.Windows.Forms.PictureBox();
+            this.pictureBoxTitle = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.player1 = new NomadGameAgain.GameObjects.Player();
+            this.botGatherer1 = new NomadGameAgain.GameObjects.BotGatherer();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obstacleCenter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.houseObstacle1)).BeginInit();
@@ -53,6 +56,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bushObstacle2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.houseObstacle3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logObstacle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTitle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // timerCoins
@@ -74,7 +79,7 @@
             this.labelCoinsLeft.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelCoinsLeft.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.labelCoinsLeft.Image = global::NomadGameAgain.Properties.Resources.medievalTile_13;
-            this.labelCoinsLeft.Location = new System.Drawing.Point(133, -3);
+            this.labelCoinsLeft.Location = new System.Drawing.Point(140, 12);
             this.labelCoinsLeft.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCoinsLeft.Name = "labelCoinsLeft";
             this.labelCoinsLeft.Size = new System.Drawing.Size(77, 31);
@@ -87,7 +92,7 @@
             this.labelCoinsGathered.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelCoinsGathered.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.labelCoinsGathered.Image = global::NomadGameAgain.Properties.Resources.medievalTile_13;
-            this.labelCoinsGathered.Location = new System.Drawing.Point(0, -3);
+            this.labelCoinsGathered.Location = new System.Drawing.Point(13, 12);
             this.labelCoinsGathered.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCoinsGathered.Name = "labelCoinsGathered";
             this.labelCoinsGathered.Size = new System.Drawing.Size(99, 31);
@@ -110,7 +115,7 @@
             // 
             this.obstacleCenter.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
             this.obstacleCenter.Image = global::NomadGameAgain.Properties.Resources.medievalStructure_12;
-            this.obstacleCenter.Location = new System.Drawing.Point(691, 207);
+            this.obstacleCenter.Location = new System.Drawing.Point(619, 42);
             this.obstacleCenter.Name = "obstacleCenter";
             this.obstacleCenter.Size = new System.Drawing.Size(77, 88);
             this.obstacleCenter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -134,37 +139,18 @@
             // 
             this.houseObstacle2.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
             this.houseObstacle2.Image = global::NomadGameAgain.Properties.Resources.medievalStructure_18;
-            this.houseObstacle2.Location = new System.Drawing.Point(159, 331);
+            this.houseObstacle2.Location = new System.Drawing.Point(119, 343);
             this.houseObstacle2.Name = "houseObstacle2";
             this.houseObstacle2.Size = new System.Drawing.Size(117, 118);
             this.houseObstacle2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.houseObstacle2.TabIndex = 11;
             this.houseObstacle2.TabStop = false;
             // 
-            // player1
-            // 
-            this.player1.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
-            this.player1.Location = new System.Drawing.Point(531, 181);
-            this.player1.Margin = new System.Windows.Forms.Padding(4);
-            this.player1.Name = "player1";
-            this.player1.Size = new System.Drawing.Size(54, 73);
-            this.player1.TabIndex = 0;
-            this.player1.Load += new System.EventHandler(this.player1_Load);
-            // 
-            // botGatherer1
-            // 
-            this.botGatherer1.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
-            this.botGatherer1.Location = new System.Drawing.Point(942, 280);
-            this.botGatherer1.Margin = new System.Windows.Forms.Padding(4);
-            this.botGatherer1.Name = "botGatherer1";
-            this.botGatherer1.Size = new System.Drawing.Size(60, 69);
-            this.botGatherer1.TabIndex = 6;
-            // 
             // bushObstacle3
             // 
             this.bushObstacle3.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
             this.bushObstacle3.Image = global::NomadGameAgain.Properties.Resources.medievalEnvironment_19;
-            this.bushObstacle3.Location = new System.Drawing.Point(1074, 358);
+            this.bushObstacle3.Location = new System.Drawing.Point(1080, 410);
             this.bushObstacle3.Name = "bushObstacle3";
             this.bushObstacle3.Size = new System.Drawing.Size(51, 63);
             this.bushObstacle3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -186,7 +172,7 @@
             // 
             this.bushObstacle4.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
             this.bushObstacle4.Image = global::NomadGameAgain.Properties.Resources.medievalEnvironment_19;
-            this.bushObstacle4.Location = new System.Drawing.Point(886, 42);
+            this.bushObstacle4.Location = new System.Drawing.Point(850, 67);
             this.bushObstacle4.Name = "bushObstacle4";
             this.bushObstacle4.Size = new System.Drawing.Size(51, 63);
             this.bushObstacle4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -197,7 +183,7 @@
             // 
             this.bushObstacle2.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
             this.bushObstacle2.Image = global::NomadGameAgain.Properties.Resources.medievalEnvironment_19;
-            this.bushObstacle2.Location = new System.Drawing.Point(458, 453);
+            this.bushObstacle2.Location = new System.Drawing.Point(445, 453);
             this.bushObstacle2.Name = "bushObstacle2";
             this.bushObstacle2.Size = new System.Drawing.Size(51, 63);
             this.bushObstacle2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -208,12 +194,13 @@
             // 
             this.houseObstacle3.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
             this.houseObstacle3.Image = global::NomadGameAgain.Properties.Resources.medievalStructure_19;
-            this.houseObstacle3.Location = new System.Drawing.Point(335, 21);
+            this.houseObstacle3.Location = new System.Drawing.Point(303, 23);
             this.houseObstacle3.Name = "houseObstacle3";
-            this.houseObstacle3.Size = new System.Drawing.Size(130, 137);
+            this.houseObstacle3.Size = new System.Drawing.Size(153, 166);
             this.houseObstacle3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.houseObstacle3.TabIndex = 16;
             this.houseObstacle3.TabStop = false;
+            this.houseObstacle3.Click += new System.EventHandler(this.houseObstacle3_Click);
             // 
             // logObstacle
             // 
@@ -226,11 +213,54 @@
             this.logObstacle.TabIndex = 17;
             this.logObstacle.TabStop = false;
             // 
+            // pictureBoxTitle
+            // 
+            this.pictureBoxTitle.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
+            this.pictureBoxTitle.Image = global::NomadGameAgain.Properties.Resources.Nomad_Game;
+            this.pictureBoxTitle.Location = new System.Drawing.Point(942, 12);
+            this.pictureBoxTitle.Name = "pictureBoxTitle";
+            this.pictureBoxTitle.Size = new System.Drawing.Size(346, 38);
+            this.pictureBoxTitle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxTitle.TabIndex = 18;
+            this.pictureBoxTitle.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(403, 522);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(586, 39);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 19;
+            this.pictureBox2.TabStop = false;
+            // 
+            // player1
+            // 
+            this.player1.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
+            this.player1.Location = new System.Drawing.Point(531, 181);
+            this.player1.Margin = new System.Windows.Forms.Padding(4);
+            this.player1.Name = "player1";
+            this.player1.Size = new System.Drawing.Size(54, 73);
+            this.player1.TabIndex = 0;
+            this.player1.Load += new System.EventHandler(this.player1_Load);
+            // 
+            // botGatherer1
+            // 
+            this.botGatherer1.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
+            this.botGatherer1.Location = new System.Drawing.Point(942, 280);
+            this.botGatherer1.Margin = new System.Windows.Forms.Padding(4);
+            this.botGatherer1.Name = "botGatherer1";
+            this.botGatherer1.Size = new System.Drawing.Size(60, 69);
+            this.botGatherer1.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1312, 567);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBoxTitle);
             this.Controls.Add(this.logObstacle);
             this.Controls.Add(this.houseObstacle3);
             this.Controls.Add(this.bushObstacle2);
@@ -264,6 +294,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bushObstacle2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.houseObstacle3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logObstacle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTitle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,6 +319,8 @@
         private System.Windows.Forms.PictureBox bushObstacle2;
         private System.Windows.Forms.PictureBox houseObstacle3;
         private System.Windows.Forms.PictureBox logObstacle;
+        private System.Windows.Forms.PictureBox pictureBoxTitle;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
