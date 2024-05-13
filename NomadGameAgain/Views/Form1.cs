@@ -98,7 +98,6 @@ namespace NomadGameAgain
             KeyPreview = true;
         }
 
-        // Создаем один раз экземпляр Random
         private Random random = new Random();
 
         private void Coin_Generate(object sender, EventArgs e)
