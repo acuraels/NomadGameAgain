@@ -105,7 +105,7 @@ namespace NomadGameAgain.GameObjects
 
                     var length = (int)Math.Sqrt(tx *tx + ty * ty);
 
-                    if(length < distClosest)
+                    if (length < distClosest)
                     {
                         distClosest = length;
                         c = item;
