@@ -16,7 +16,7 @@ namespace NomadGameAgain
             this.bot = bot;
             this.coins = coins;
 
-            // Дополнительная инициализация, если необходимо
+            
             Initialize();
         }
 
