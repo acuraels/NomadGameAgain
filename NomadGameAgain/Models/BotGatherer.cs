@@ -10,14 +10,14 @@ namespace NomadGameAgain.GameObjects
         private System.ComponentModel.IContainer components;
         private PictureBox pictureBox1;
 
-        private int speed = 3;
+        private int speed = 4;
 
         public BotGatherer()
         {
             InitializeComponent();
         }
 
-        private void InitializeComponent()
+        private new void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
             this.timerBot = new System.Windows.Forms.Timer(this.components);
@@ -41,7 +41,6 @@ namespace NomadGameAgain.GameObjects
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // BotGatherer
             // 
@@ -53,16 +52,11 @@ namespace NomadGameAgain.GameObjects
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Update(object sender, EventArgs e)
         {
             Coin c = GetClosest();
 
-            if(c != null)
+            if (c != null)
                 MoveTowards(c.Location.X, c.Location.Y, speed);
         }
 
@@ -96,7 +90,7 @@ namespace NomadGameAgain.GameObjects
             Coin c = null;
             var distClosest = 9999;
 
-            if(Core.CoinsList.Count > 0)
+            if (Core.CoinsList.Count > 0)
             {
                 foreach (var item in Core.CoinsList)
                 {
@@ -112,6 +106,7 @@ namespace NomadGameAgain.GameObjects
                     }
                 }
             }
+
             return c;
         }
     }

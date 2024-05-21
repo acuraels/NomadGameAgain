@@ -50,8 +50,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contollers\Core.cs" />
-    <Compile Include="Models\Obstacle.cs">
-      <SubType>Component</SubType>
+    <Compile Include="Views\LoseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LoseForm.Designer.cs">
+      <DependentUpon>LoseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\StartForm.cs">
       <SubType>Form</SubType>
@@ -80,6 +83,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Views\LoseForm.resx">
+      <DependentUpon>LoseForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +201,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="medievalUnit_02.ico" />
+    <None Include="Resources\Вы проиграли!.png" />
     <None Include="Resources\medievalUnit_15.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

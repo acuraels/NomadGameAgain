@@ -123,16 +123,6 @@ namespace NomadGameAgain.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap medievalEnvironment_20 {
-            get {
-                object obj = ResourceManager.GetObject("medievalEnvironment_20", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap medievalStructure_02 {
             get {
                 object obj = ResourceManager.GetObject("medievalStructure_02", resourceCulture);
@@ -243,26 +233,6 @@ namespace NomadGameAgain.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap medievalUnit_09 {
-            get {
-                object obj = ResourceManager.GetObject("medievalUnit_09", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap medievalUnit_10 {
-            get {
-                object obj = ResourceManager.GetObject("medievalUnit_10", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap medievalUnit_15 {
             get {
                 object obj = ResourceManager.GetObject("medievalUnit_15", resourceCulture);
@@ -273,29 +243,19 @@ namespace NomadGameAgain.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap medievalUnit_21 {
-            get {
-                object obj = ResourceManager.GetObject("medievalUnit_21", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap medievalUnit_24 {
-            get {
-                object obj = ResourceManager.GetObject("medievalUnit_24", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Nomad_Game {
             get {
                 object obj = ResourceManager.GetObject("Nomad_Game", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Вы_проиграли_ {
+            get {
+                object obj = ResourceManager.GetObject("Вы_проиграли_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Drawing;
 
 namespace NomadGameAgain.GameObjects
 {
@@ -11,9 +10,9 @@ namespace NomadGameAgain.GameObjects
         private PictureBox pictureBox1;
 
 
-        private int speed = 4;
+        private int speed = 5;
 
-        private void InitializeComponent()
+        private new void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
             this.timerUpdate = new System.Windows.Forms.Timer(this.components);
@@ -37,7 +36,6 @@ namespace NomadGameAgain.GameObjects
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Player
             // 
@@ -53,13 +51,6 @@ namespace NomadGameAgain.GameObjects
         public Player()
         {
             InitializeComponent();
-        }
-
-
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Update(object sender, EventArgs e)

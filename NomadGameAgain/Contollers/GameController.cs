@@ -1,6 +1,7 @@
 ﻿using NomadGameAgain.GameObjects;
 using System;
 using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace NomadGameAgain
 {
@@ -9,6 +10,7 @@ namespace NomadGameAgain
         private Player player;
         private BotGatherer bot;
         private List<Coin> coins;
+        private Timer gameTimer;
 
         public GameController(Player player, BotGatherer bot, List<Coin> coins)
         {
@@ -16,27 +18,35 @@ namespace NomadGameAgain
             this.bot = bot;
             this.coins = coins;
 
-            
             Initialize();
         }
 
         private void Initialize()
         {
-            // Дополнительная инициализация контроллера, если необходимо
+            gameTimer = new Timer();
+            gameTimer.Interval = 100; 
+            gameTimer.Tick += Update;
         }
 
-        public void StartGame()
+        private void Update(object sender, EventArgs e)
         {
-            // Метод для начала игры
-            // Например, можно вызвать методы начала работы игрока, бота и монет
-            // player.Start();
-            // bot.Start();
-            // foreach (var coin in coins)
-            // {
-            //     coin.Start();
-            // }
+            UpdatePlayer();
+            UpdateBot();
+
+            foreach (var coin in coins)
+                coin.Update();
+
+            Initialize();
         }
 
-        // Другие методы управления игрой...
+        private void UpdatePlayer()
+        {
+               
+        }
+
+        private void UpdateBot()
+        {
+            
+        }
     }
 }

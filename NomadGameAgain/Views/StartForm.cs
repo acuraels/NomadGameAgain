@@ -27,10 +27,5 @@ namespace NomadGameAgain
             if (e.KeyChar == (char)Keys.Escape)
                 this.Close();
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

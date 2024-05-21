@@ -1,10 +1,10 @@
 ﻿using NomadGameAgain.GameObjects;
+using NomadGameAgain.Views;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace NomadGameAgain
 {
@@ -12,27 +12,22 @@ namespace NomadGameAgain
     {
         private GameController gameController;
         public int speed = 6;
+        private bool isGameOver = false;
 
         public Form1()
         {
             InitializeComponent();
 
-            // Создаем экземпляры игрока, бота и списка монет
             Player player = new Player();
             BotGatherer bot = new BotGatherer();
             List<Coin> coins = new List<Coin>();
 
-            // Добавляем игрока, бота и монеты на форму и в список монет
             this.Controls.Add(player);
             this.Controls.Add(bot);
             foreach (var coin in coins)
-            {
                 this.Controls.Add(coin);
-            }
 
-            // Создаем экземпляр контроллера и передаем ему игрока, бота и список монет
             gameController = new GameController(player, bot, coins);
-
         }
 
         private Point position;
@@ -55,7 +50,7 @@ namespace NomadGameAgain
             if (dragging)
             {
                 Point currentPoint = PointToScreen(new Point(e.X, e.Y));
-                this.Location = new Point(currentPoint.X - position.X, currentPoint.Y - position.Y + pictureBox1.Top);
+                this.Location = new Point(currentPoint.X - position.X, currentPoint.Y - position.Y + background.Top);
             }
         }
 
@@ -83,16 +78,6 @@ namespace NomadGameAgain
                 Core.IsRight = false;
         }
 
-        private void player1_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Form1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             KeyPreview = true;
@@ -102,33 +87,19 @@ namespace NomadGameAgain
 
         private void Coin_Generate(object sender, EventArgs e)
         {
-            Console.WriteLine("Generating coin...");
-
-            // Генерируем уникальные координаты для каждой монетки
-            var x = random.Next(20, 300);
-            var y = random.Next(20, 300);
+            var x = random.Next(100, 800);
+            var y = random.Next(100, 400);
 
             Coin coin = new Coin(x, y);
-            Console.WriteLine($"Coin created at position ({x}, {y})");
 
-            // Добавляем монетку на форму
             Controls.Add(coin);
-            Console.WriteLine("Coin added to controls");
 
-            // Добавляем монетку в список монет
             Core.CoinsList.Add(coin);
-            Console.WriteLine($"Total coins: {Core.CoinsList.Count}");
 
-            // Обновляем текст метки
             labelCoinsLeft.Text = $"{Core.CoinsList.Count} Left";
 
-            // Обновляем экран
             Invalidate();
         }
-
-
-
-
 
         private void OnKeyPress(object sender, KeyPressEventArgs e)
         {
@@ -138,7 +109,9 @@ namespace NomadGameAgain
 
         private void Update(object sender, EventArgs e)
         {
-            List<Coin> coinsToRemove = new List<Coin>(Core.CoinsList);
+            if (isGameOver) return;
+
+            var coinsToRemove = new List<Coin>(Core.CoinsList);
 
             foreach (var coin in coinsToRemove)
             {
@@ -159,17 +132,16 @@ namespace NomadGameAgain
                 (player1.Bounds.IntersectsWith(labelCoinsGathered.Bounds)) || (player1.Bounds.IntersectsWith(labelCoinsLeft.Bounds)) ||
                 (player1.Bounds.IntersectsWith(bushObstacle1.Bounds)) || (player1.Bounds.IntersectsWith(bushObstacle2.Bounds)) ||
                 (player1.Bounds.IntersectsWith(bushObstacle3.Bounds)) || (player1.Bounds.IntersectsWith(bushObstacle4.Bounds)) ||
-                (player1.Bounds.IntersectsWith(pictureBoxTitle.Bounds)) || (player1.Bounds.IntersectsWith(pictureBoxEsc.Bounds)) ||
-                 (player1.Bounds.IntersectsWith(logObstacle.Bounds)))
-
+                (player1.Bounds.IntersectsWith(bushObstacle5.Bounds)) || (player1.Bounds.IntersectsWith(rockObstacle1.Bounds)) ||
+                (player1.Bounds.IntersectsWith(rockObstacle2.Bounds)) ||(player1.Bounds.IntersectsWith(pictureBoxTitle.Bounds)) ||
+                (player1.Bounds.IntersectsWith(pictureBoxEsc.Bounds)) || (player1.Bounds.IntersectsWith(logObstacle.Bounds)))
             {
                 if (Core.IsRight)
                 {
                     Core.IsRight = false;
-                    player1.Left -= speed; // Откатываем игрока назад, чтобы он не застрял в препятствии
+                    player1.Left -= speed;
                 }
 
-                // То же самое делаем для остальных направлений движения
                 if (Core.IsLeft)
                 {
                     Core.IsLeft = false;
@@ -190,67 +162,20 @@ namespace NomadGameAgain
             }
 
             if (player1.Bounds.IntersectsWith(botGatherer1.Bounds))
-            {
-                if (Core.IsRight)
-                {
-                    Core.IsRight = false;
-                    player1.Left -= speed; // Откатываем игрока назад, чтобы он не застрял в препятствии
-                }
-
-                // То же самое делаем для остальных направлений движения
-                if (Core.IsLeft)
-                {
-                    Core.IsLeft = false;
-                    player1.Left += speed;
-                }
-
-                if (Core.IsUp)
-                {
-                    Core.IsUp = false;
-                    player1.Top += speed;
-                }
-
-                if (Core.IsDown)
-                {
-                    Core.IsDown = false;
-                    player1.Top -= speed;
-                }
-            }
+                ShowLoseForm();
         }
 
-        private void coin1_Load(object sender, EventArgs e)
+        private void ShowLoseForm()
         {
+            isGameOver = true;
+         
+            var loseForm = new LoseForm();
+            var result = loseForm.ShowDialog();
 
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        public void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void houseObstacle1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void houseObstacle3_Click(object sender, EventArgs e)
-        {
-
+            if (result == DialogResult.Retry)
+                Application.Restart();
+            else if (result == DialogResult.Abort)
+                Application.Exit();
         }
 
         void AddCoin()
