@@ -148,7 +148,7 @@
             // 
             this.logObstacle.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
             this.logObstacle.Image = global::NomadGameAgain.Properties.Resources.medievalEnvironment_05;
-            this.logObstacle.Location = new System.Drawing.Point(876, 466);
+            this.logObstacle.Location = new System.Drawing.Point(942, 466);
             this.logObstacle.Name = "logObstacle";
             this.logObstacle.Size = new System.Drawing.Size(100, 50);
             this.logObstacle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -170,7 +170,7 @@
             // 
             this.bushObstacle2.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
             this.bushObstacle2.Image = global::NomadGameAgain.Properties.Resources.medievalEnvironment_19;
-            this.bushObstacle2.Location = new System.Drawing.Point(281, 28);
+            this.bushObstacle2.Location = new System.Drawing.Point(380, 12);
             this.bushObstacle2.Name = "bushObstacle2";
             this.bushObstacle2.Size = new System.Drawing.Size(51, 63);
             this.bushObstacle2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -239,7 +239,7 @@
             this.labelCoinsLeft.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelCoinsLeft.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.labelCoinsLeft.Image = global::NomadGameAgain.Properties.Resources.medievalTile_13;
-            this.labelCoinsLeft.Location = new System.Drawing.Point(140, 12);
+            this.labelCoinsLeft.Location = new System.Drawing.Point(192, 12);
             this.labelCoinsLeft.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCoinsLeft.Name = "labelCoinsLeft";
             this.labelCoinsLeft.Size = new System.Drawing.Size(77, 31);

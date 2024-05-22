@@ -19,6 +19,7 @@ namespace NomadGameAgain
         public static bool IsLeft = false;
         public static bool IsRight = false;
 
+
         // Coins
         public static List<Coin> CoinsList = new List<Coin>();
         public static int Coins = 0;

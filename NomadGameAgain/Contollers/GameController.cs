@@ -41,12 +41,12 @@ namespace NomadGameAgain
 
         private void UpdatePlayer()
         {
-               
+            Initialize();
         }
 
         private void UpdateBot()
         {
-            
+            Initialize();
         }
     }
 }

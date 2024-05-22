@@ -88,7 +88,7 @@ namespace NomadGameAgain
         private void Coin_Generate(object sender, EventArgs e)
         {
             var x = random.Next(100, 800);
-            var y = random.Next(100, 400);
+            var y = random.Next(150, 350);
 
             Coin coin = new Coin(x, y);
 
@@ -139,25 +139,37 @@ namespace NomadGameAgain
                 if (Core.IsRight)
                 {
                     Core.IsRight = false;
-                    player1.Left -= speed;
+                    Core.IsLeft = false;
+                    Core.IsDown = false;
+                    Core.IsUp = false;
+                    player1.Left -= speed * 5;
                 }
 
                 if (Core.IsLeft)
                 {
+                    Core.IsRight = false;
                     Core.IsLeft = false;
-                    player1.Left += speed;
+                    Core.IsDown = false;
+                    Core.IsUp = false;
+                    player1.Left += speed * 5;
                 }
 
                 if (Core.IsUp)
                 {
+                    Core.IsRight = false;
+                    Core.IsLeft = false;
+                    Core.IsDown = false;
                     Core.IsUp = false;
-                    player1.Top += speed;
+                    player1.Top += speed * 5;
                 }
 
                 if (Core.IsDown)
                 {
+                    Core.IsRight = false;
+                    Core.IsLeft = false;
                     Core.IsDown = false;
-                    player1.Top -= speed;
+                    Core.IsUp = false;
+                    player1.Top -= speed * 5;
                 }
             }
 

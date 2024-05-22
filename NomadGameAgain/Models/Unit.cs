@@ -6,7 +6,7 @@ namespace NomadGameAgain.GameObjects
     {
         public void InitializeComponent()
         {
-
+            InitializeComponent();
         }
     }
 }

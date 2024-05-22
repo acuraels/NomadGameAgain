@@ -12,7 +12,7 @@ namespace NomadGameAgain.Views
 
         private void LoseForm_Load(object sender, EventArgs e)
         {
-
+            InitializeComponent();
         }
 
         private void btnRestart_Click(object sender, EventArgs e)
