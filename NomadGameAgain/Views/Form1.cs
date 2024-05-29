@@ -133,7 +133,7 @@ namespace NomadGameAgain
                 (player1.Bounds.IntersectsWith(bushObstacle1.Bounds)) || (player1.Bounds.IntersectsWith(bushObstacle2.Bounds)) ||
                 (player1.Bounds.IntersectsWith(bushObstacle3.Bounds)) || (player1.Bounds.IntersectsWith(bushObstacle4.Bounds)) ||
                 (player1.Bounds.IntersectsWith(bushObstacle5.Bounds)) || (player1.Bounds.IntersectsWith(rockObstacle1.Bounds)) ||
-                (player1.Bounds.IntersectsWith(rockObstacle2.Bounds)) ||(player1.Bounds.IntersectsWith(pictureBoxTitle.Bounds)) ||
+                (player1.Bounds.IntersectsWith(rockObstacle2.Bounds)) || (player1.Bounds.IntersectsWith(pictureBoxTitle.Bounds)) ||
                 (player1.Bounds.IntersectsWith(pictureBoxEsc.Bounds)) || (player1.Bounds.IntersectsWith(logObstacle.Bounds)))
             {
                 if (Core.IsRight)
@@ -180,7 +180,7 @@ namespace NomadGameAgain
         private void ShowLoseForm()
         {
             isGameOver = true;
-         
+
             var loseForm = new LoseForm();
             var result = loseForm.ShowDialog();
 

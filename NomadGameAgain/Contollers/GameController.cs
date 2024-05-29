@@ -24,7 +24,7 @@ namespace NomadGameAgain
         private void Initialize()
         {
             gameTimer = new Timer();
-            gameTimer.Interval = 100; 
+            gameTimer.Interval = 100;
             gameTimer.Tick += Update;
         }
 

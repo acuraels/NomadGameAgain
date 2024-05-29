@@ -60,7 +60,7 @@ namespace NomadGameAgain.GameObjects
                 MoveTowards(c.Location.X, c.Location.Y, speed);
         }
 
-        public void MoveTowards(int x, int y, float speed) 
+        public void MoveTowards(int x, int y, float speed)
         {
             Point pt = Location;
 
@@ -68,7 +68,7 @@ namespace NomadGameAgain.GameObjects
             var ty = y - pt.Y;
             var length = (float)Math.Sqrt(tx * tx + ty * ty);
 
-            if (length > speed) 
+            if (length > speed)
             {
                 pt.X = (int)(pt.X + speed * tx / length);
                 pt.Y = (int)(pt.Y + speed * ty / length);
@@ -97,7 +97,7 @@ namespace NomadGameAgain.GameObjects
                     var tx = item.Location.X - Location.X;
                     var ty = item.Location.Y - Location.Y;
 
-                    var length = (int)Math.Sqrt(tx *tx + ty * ty);
+                    var length = (int)Math.Sqrt(tx * tx + ty * ty);
 
                     if (length < distClosest)
                     {
