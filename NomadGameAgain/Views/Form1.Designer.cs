@@ -273,7 +273,7 @@
             // player1
             // 
             this.player1.BackgroundImage = global::NomadGameAgain.Properties.Resources.medievalTile_13;
-            this.player1.Location = new System.Drawing.Point(531, 181);
+            this.player1.Location = new System.Drawing.Point(531, 188);
             this.player1.Margin = new System.Windows.Forms.Padding(4);
             this.player1.Name = "player1";
             this.player1.Size = new System.Drawing.Size(54, 73);
